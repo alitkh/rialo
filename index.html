@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rialo.io Quiz</title>
+    <style>
+        /* CSS Sederhana untuk Tampilan */
+        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #f4f4f9; }
+        #quiz-container { background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); width: 500px; }
+        button { display: block; width: 100%; padding: 10px; border: none; background-color: #007bff; color: white; border-radius: 5px; margin-top: 10px; cursor: pointer; }
+        button:hover { background-color: #0056b3; }
+        .option { margin: 10px 0; padding: 10px; border: 1px solid #ddd; border-radius: 5px; cursor: pointer; }
+        .option:hover { background-color: #f0f0f0; }
+        .correct { background-color: #d4edda; border-color: #c3e6cb; }
+        .incorrect { background-color: #f8d7da; border-color: #f5c6cb; }
+    </style>
+</head>
+<body>
+
+    <div id="quiz-container">
+        <h2 id="question">Question goes here</h2>
+        <div id="options-container">
+            </div>
+        <button id="next-btn" style="display:none;">Next Question</button>
+        <div id="result-container" style="display:none;"></div>
+    </div>
+
+    <script src="quiz-data.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
