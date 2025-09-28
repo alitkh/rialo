@@ -9,95 +9,96 @@ const restartButton = document.getElementById('restart-btn');
 let shuffledQuestions, currentQuestionIndex;
 let score = 0;
 
+// Updated questions about the Rialo.io blockchain project
 const questions = [
     {
-        question: "What is the primary purpose of Rialo.io?",
+        question: "What type of project is Rialo.io?",
         answers: [
             { text: "A social media platform", correct: false },
-            { text: "An online portfolio and resume builder", correct: true },
-            { text: "A video streaming service", correct: false },
-            { text: "An e-commerce marketplace", correct: false }
+            { text: "A Layer-1 Blockchain", correct: true },
+            { text: "A cryptocurrency exchange", correct: false },
+            { text: "A portfolio builder website", correct: false }
         ]
     },
     {
-        question: "Which feature allows you to showcase your professional experience on Rialo.io?",
+        question: "What is the main goal of the Rialo.io blockchain?",
         answers: [
-            { text: "Blog", correct: false },
-            { text: "Gallery", correct: false },
-            { text: "Timeline", correct: true },
-            { text: "Shop", correct: false }
+            { text: "To create digital art (NFTs)", correct: false },
+            { text: "To trade stocks", correct: false },
+            { text: "To connect dApps with real-world data and systems", correct: true },
+            { text: "To be a faster version of Bitcoin", correct: false }
         ]
     },
     {
-        question: "Rialo.io helps users create a professional _______ to share with recruiters.",
+        question: "Rialo.io is often described as 'The _______ Blockchain'.",
         answers: [
-            { text: "online presence", correct: true },
-            { text: "music album", correct: false },
-            { text: "cooking recipe", correct: false },
-            { text: "video game", correct: false }
+            { text: "Real-world", correct: true },
+            { text: "Gaming", correct: false },
+            { text: "Private", correct: false },
+            { text: "Financial", correct: false }
         ]
     },
     {
-        question: "Can you add your skills to your Rialo.io profile?",
+        question: "Which lab is responsible for developing the Rialo.io project?",
         answers: [
-            { text: "No, it's not supported", correct: false },
-            { text: "Only five skills are allowed", correct: false },
-            { text: "Yes, in a dedicated 'Skills' section", correct: true },
-            { text: "Only if you have a premium account", correct: false }
+            { text: "Google AI", correct: false },
+            { text: "Solana Labs", correct: false },
+            { text: "Ethereum Foundation", correct: false },
+            { text: "Subzero Labs", correct: true }
         ]
     },
     {
-        question: "What kind of media can you typically add to a Rialo.io portfolio?",
+        question: "Rialo.io aims to make the Web3 development experience as easy as which of the following?",
         answers: [
-            { text: "Only text", correct: false },
-            { text: "Images, videos, and documents", correct: true },
-            { text: "Only audio files", correct: false },
-            { text: "Only 3D models", correct: false }
+            { text: "Web1", correct: false },
+            { text: "Web2 (Traditional Web)", correct: true },
+            { text: "Game Development", correct: false },
+            { text: "Mobile App Development", correct: false }
         ]
     },
     {
-        question: "The 'Timeline' feature on Rialo.io is best used for showcasing what?",
+        question: "Which virtual machine (VM) is Rialo.io compatible with, making it easier for developers to migrate programs?",
         answers: [
-            { text: "Your favorite movies", correct: false },
-            { text: "Your daily schedule", correct: false },
-            { text: "Your education and work history", correct: true },
-            { text: "Your vacation photos", correct: false }
+            { text: "Ethereum Virtual Machine (EVM)", correct: false },
+            { text: "Java Virtual Machine (JVM)", correct: false },
+            { text: "Solana VM", correct: true },
+            { text: "WASM (WebAssembly)", correct: false }
         ]
     },
     {
-        question: "Is Rialo.io designed for a specific profession?",
+        question: "What does 'Layer-1' mean in the context of a blockchain like Rialo.io?",
         answers: [
-            { text: "Yes, only for software developers", correct: false },
-            { text: "Yes, only for graphic designers", correct: false },
-            { text: "No, it's versatile for many professions", correct: true },
-            { text: "Yes, only for writers", correct: false }
+            { text: "It's an application built on another blockchain", correct: false },
+            { text: "It's the fundamental, base blockchain protocol", correct: true },
+            { text: "It's a secondary, faster network", correct: false },
+            { text: "It's a user interface for a blockchain", correct: false }
         ]
     },
     {
-        question: "What is a key benefit of having an online portfolio like one from Rialo.io?",
+        question: "What are applications built on a blockchain like Rialo.io called?",
         answers: [
-            { text: "It replaces the need for a LinkedIn profile", correct: false },
-            { text: "It provides a dynamic and visual way to showcase your work", correct: true },
-            { text: "It automatically finds a job for you", correct: false },
-            { text: "It guarantees a higher salary", correct: false }
+            { text: "Websites", correct: false },
+            { text: "Software", correct: false },
+            { text: "dApps (decentralized applications)", correct: true },
+            { text: "Platforms", correct: false }
         ]
     },
     {
-        question: "Rialo.io aims to make resume and portfolio building...",
+        question: "The architecture of Rialo.io is primarily built for what purpose?",
         answers: [
-            { text: "Complicated and technical", correct: false },
-            { text: "Exclusive for experts", correct: false },
-            { text: "Simple, fast, and elegant", correct: true },
-            { text: "Expensive and time-consuming", correct: false }
+            { text: "Data storage only", correct: false },
+            { text: "Scalability, speed, and ease of use for developers", correct: true },
+            { text: "Anonymous transactions", correct: false },
+            { text: "Running artificial intelligence models", correct: false }
         ]
     },
     {
-        question: "Can you customize the look of your Rialo.io profile?",
+        question: "What is a key feature of Rialo.io regarding real-world interaction?",
         answers: [
-            { text: "No, all profiles look identical", correct: false },
-            { text: "Yes, with various themes and layout options", correct: true },
-            { text: "Only the font color can be changed", correct: false },
-            { text: "Customization is a paid feature only", correct: false }
+            { text: "It uses real-world currency directly", correct: false },
+            { text: "It has a built-in identity verification system", correct: false },
+            { text: "It can interact with real-world systems natively from its protocol", correct: true },
+            { text: "It partners with physical stores", correct: false }
         ]
     }
 ];
