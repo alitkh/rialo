@@ -27,6 +27,16 @@ body {
     text-align: center;
 }
 
+/* Styling for the header logo */
+.header-logo {
+    width: 80px; /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 20px;
+    display: block; /* Ensures it takes its own line */
+    margin-left: auto;
+    margin-right: auto;
+}
+
 h1 {
     font-weight: 600;
     margin-bottom: 30px;
@@ -89,6 +99,7 @@ h1 {
     background-color: #f8f9fa;
     color: #333;
     transition: all 0.3s;
+    margin-top: 15px; /* Added some margin for spacing */
 }
 
 #next-btn:hover, #restart-btn:hover {
@@ -99,6 +110,25 @@ h1 {
 .score-container {
     margin-top: 20px;
 }
+
+/* Styling for the Visit Rialo.io link */
+.visit-link {
+    margin-top: 20px;
+    font-size: 1.1rem;
+}
+
+.visit-link a {
+    color: #a2d2ff; /* A lighter blue for better contrast */
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.visit-link a:hover {
+    color: #e0f2fe; /* Lighter on hover */
+    text-decoration: underline;
+}
+
 
 .hide {
     display: none;
