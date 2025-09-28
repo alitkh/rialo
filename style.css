@@ -1,0 +1,112 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 800px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    text-align: center;
+}
+
+h1 {
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.quiz-container {
+    padding: 20px 0;
+}
+
+#question {
+    margin-bottom: 2rem;
+}
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.btn {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    padding: 15px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+.btn.correct {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn.incorrect {
+    background-color: #dc3545;
+    color: white;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#next-btn, #restart-btn {
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 12px 30px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    color: #333;
+    transition: all 0.3s;
+}
+
+#next-btn:hover, #restart-btn:hover {
+    background-color: #e2e6ea;
+    transform: scale(1.05);
+}
+
+.score-container {
+    margin-top: 20px;
+}
+
+.hide {
+    display: none;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .btn-grid {
+        grid-template-columns: 1fr;
+    }
+}
